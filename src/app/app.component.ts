@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'meal-hub';
+  currentView: string = "recipes";
+
+  onNavigationFired(desiredView) {
+
+    console.log("NAVIGATION request receive by app. Desired view = ", desiredView);
+    this.currentView = desiredView;
+  }
 }
